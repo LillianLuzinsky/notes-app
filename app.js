@@ -23,7 +23,23 @@ yargs.command({
     }
 })
 
-//add, remove, read, list
+// create a list command
+yargs.command({
+  command: "list",
+  describe: "listing all notes",
+  handler: function () {
+    console.log("this is the list of our notes")  
+  }
+})
+
+//create a read command
+yargs.command({
+  command: "read",
+  describe: "reading notes",
+  handler: function () {
+    console.log('reading all notes')
+  }
+})
 
 
 console.log(yargs.argv)
